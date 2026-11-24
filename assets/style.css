@@ -1,0 +1,322 @@
+/* ==========================================================================
+   ESTILOS CORPORATIVOS — BI ENERGISA PARAÍBA
+   Design minimalista, alto contraste (WCAG AA) e leitura confortável.
+   ========================================================================== */
+
+/* 1. Variáveis e Cores Globais */
+:root {
+    --primary-color: #005596;       /* Azul Energisa Oficial */
+    --primary-hover: #004073;
+    --primary-soft: #E0F0FA;        /* Fundo do item ativo */
+    --secondary-color: #0083CA;     /* Azul Claro Complementar */
+    --accent-color: #FF7A00;        /* Laranja Destaque */
+    --bg-app: #F8FAFC;              /* Slate 50 */
+    --card-bg: #FFFFFF;
+    --card-border: #E2E8F0;         /* Slate 200 */
+    --card-border-hover: #CBD5E1;   /* Slate 300 */
+    --text-primary: #0F172A;        /* Slate 900 — Contraste 15:1 */
+    --text-secondary: #475569;      /* Slate 600 — Contraste 6.8:1 */
+    --text-menu: #1E293B;           /* Slate 800 — Contraste 12.6:1 */
+    --success: #16A34A;
+    --warning: #D97706;
+    --danger: #DC2626;
+}
+
+/* 2. Limpeza da Interface Padrão Streamlit */
+#MainMenu, footer {
+    visibility: hidden;
+    height: 0%;
+}
+
+header[data-testid="stHeader"] {
+    background: transparent;
+}
+
+.stApp {
+    background-color: var(--bg-app);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+    color: var(--text-primary);
+}
+
+.block-container {
+    padding-top: 1.25rem !important;
+    padding-bottom: 2.5rem !important;
+    max-width: 1400px;
+}
+
+/* 3. Cabeçalho de Página */
+.page-header-container {
+    margin-bottom: 1rem;
+    padding-bottom: 0.65rem;
+    border-bottom: 1px solid var(--card-border);
+}
+
+.page-header-title {
+    font-size: 1.65rem;
+    font-weight: 700;
+    color: var(--primary-color);
+    margin: 0 0 0.2rem 0;
+    letter-spacing: -0.02em;
+}
+
+.page-header-subtitle {
+    font-size: 0.95rem;
+    color: var(--text-secondary);
+    margin: 0;
+}
+
+/* 4. Banner de Destaque Analítico (Parágrafo Contínuo, Sem Flexbox Quebrando Palavras) */
+.insight-card {
+    background-color: #F0F9FF;
+    border: 1px solid #BAE6FD;
+    border-left: 4px solid var(--secondary-color);
+    padding: 0.75rem 1.1rem;
+    border-radius: 6px;
+    margin: 0.75rem 0 1.25rem 0;
+    display: block !important;
+}
+
+.insight-label-row {
+    margin-bottom: 0.35rem;
+    display: block !important;
+}
+
+.insight-pill {
+    display: inline-block !important;
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.05em;
+    color: #0369A1;
+    background-color: #E0F2FE;
+    padding: 0.15rem 0.5rem;
+    border-radius: 4px;
+    text-transform: uppercase;
+}
+
+.insight-paragraph {
+    display: block !important;
+    font-size: 0.95rem !important;
+    line-height: 1.55 !important;
+    color: var(--text-primary) !important;
+    margin: 0 !important;
+    white-space: normal !important;
+    word-break: normal !important;
+    overflow-wrap: break-word !important;
+}
+
+.insight-paragraph strong,
+.insight-paragraph b {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
+
+/* 5. Barra Superior de Filtros Ativos (Chips) */
+.filter-bar-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 0.5rem;
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 0.55rem 0.9rem;
+    border-radius: 6px;
+    margin-bottom: 1.25rem;
+    font-size: 0.85rem;
+}
+
+.filter-bar-counter {
+    color: var(--text-primary);
+    font-weight: 600;
+    margin-right: 0.5rem;
+}
+
+.filter-chip {
+    background-color: #E2E8F0;
+    color: #1E293B;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.78rem;
+    font-weight: 500;
+    display: inline-flex;
+    align-items: center;
+}
+
+.filter-chip-accent {
+    background-color: #E0F2FE;
+    color: #0369A1;
+    border: 1px solid #BAE6FD;
+}
+
+/* 6. Barra Lateral (Sidebar) — ALTO CONTRASTE GARANTIDO */
+section[data-testid="stSidebar"] {
+    background-color: #FFFFFF !important;
+    border-right: 1px solid var(--card-border);
+    padding-top: 1rem;
+}
+
+/* Títulos de seções da Sidebar */
+section[data-testid="stSidebar"] h2,
+section[data-testid="stSidebar"] h3,
+[data-testid="stSidebarNav"] [data-testid="stSidebarNavSectionHeader"] span,
+[data-testid="stSidebarNav"] span[data-testid="stSidebarNavSectionLabel"] {
+    color: var(--text-secondary) !important;
+    font-size: 0.78rem !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.05em !important;
+    text-transform: uppercase !important;
+    opacity: 1 !important;
+}
+
+/* Itens de menu inativos da Sidebar */
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"],
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"] span,
+section[data-testid="stSidebar"] a span {
+    color: var(--text-menu) !important;
+    font-size: 0.95rem !important;
+    font-weight: 500 !important;
+    opacity: 1 !important;
+}
+
+/* Ícones dos itens de menu */
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"] svg,
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"] span[data-testid="stIconMaterial"] {
+    fill: #334155 !important;
+    color: #334155 !important;
+    opacity: 1 !important;
+}
+
+/* Hover no menu */
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"]:hover {
+    background-color: #F1F5F9 !important;
+    border-radius: 6px !important;
+}
+
+/* Item ATIVO no menu */
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"][aria-current="page"],
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"][data-selected="true"],
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"].active {
+    background-color: var(--primary-soft) !important;
+    border-left: 3px solid var(--primary-color) !important;
+    border-radius: 0 6px 6px 0 !important;
+    padding-left: 0.65rem !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"][aria-current="page"] span,
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"][data-selected="true"] span,
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"].active span {
+    color: var(--primary-color) !important;
+    font-weight: 700 !important;
+}
+
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"][aria-current="page"] svg,
+section[data-testid="stSidebar"] [data-testid="stSidebarNavLink"][data-selected="true"] svg {
+    fill: var(--primary-color) !important;
+    color: var(--primary-color) !important;
+}
+
+/* Rótulos dos formulários e filtros na Sidebar */
+section[data-testid="stSidebar"] label,
+section[data-testid="stSidebar"] label p {
+    color: var(--text-menu) !important;
+    font-weight: 600 !important;
+    font-size: 0.88rem !important;
+    opacity: 1 !important;
+}
+
+/* 7. Cards de Métricas (KPIs) — SEM RETICÊNCIAS */
+div[data-testid="stMetric"] {
+    background-color: var(--card-bg);
+    border: 1px solid var(--card-border);
+    padding: 0.9rem 1.1rem;
+    border-radius: 8px;
+    box-shadow: none !important;
+    transition: border-color 0.15s ease-in-out;
+}
+
+div[data-testid="stMetric"]:hover {
+    border-color: var(--card-border-hover);
+}
+
+/* Rótulo do KPI — Quebra normal, sem reticências */
+div[data-testid="stMetric"] label[data-testid="stMetricLabel"],
+div[data-testid="stMetric"] [data-testid="stMetricLabel"] *,
+div[data-testid="stMetricLabel"],
+div[data-testid="stMetricLabel"] * {
+    color: var(--text-secondary) !important;
+    font-size: 0.82rem !important;
+    font-weight: 600 !important;
+    letter-spacing: 0.02em !important;
+    text-transform: uppercase !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    word-break: break-word !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: var(--text-secondary) !important;
+    line-height: 1.3 !important;
+}
+
+/* Valor do KPI — Responsivo, sem reticências */
+div[data-testid="stMetricValue"],
+div[data-testid="stMetricValue"] *,
+div[data-testid="stMetricValue"] > div {
+    font-size: clamp(1.2rem, 1.55vw, 1.85rem) !important;
+    font-weight: 700 !important;
+    color: var(--text-primary) !important;
+    line-height: 1.25 !important;
+    white-space: normal !important;
+    overflow: visible !important;
+    text-overflow: unset !important;
+    overflow-wrap: anywhere !important;
+    opacity: 1 !important;
+    -webkit-text-fill-color: var(--text-primary) !important;
+}
+
+/* Deltas */
+div[data-testid="stMetricDelta"],
+div[data-testid="stMetricDelta"] * {
+    font-size: 0.8rem !important;
+    font-weight: 600 !important;
+    white-space: normal !important;
+}
+
+/* 8. Legendas, Captions e Textos de Apoio */
+.stCaption, [data-testid="stCaptionContainer"] p, [data-testid="stCaptionContainer"] {
+    color: var(--text-secondary) !important;
+    font-size: 0.86rem !important;
+    opacity: 1 !important;
+}
+
+/* 9. Tabelas e Dataframes */
+div[data-testid="stDataFrame"] {
+    border: 1px solid var(--card-border) !important;
+    border-radius: 6px !important;
+    background-color: var(--card-bg) !important;
+}
+
+div[data-testid="stDataFrame"] * {
+    color: var(--text-primary) !important;
+}
+
+/* 10. Estado Vazio (Empty State) */
+.empty-state-box {
+    text-align: center;
+    padding: 3rem 1.5rem;
+    background-color: var(--card-bg);
+    border: 1px dashed var(--card-border-hover);
+    border-radius: 8px;
+    margin: 2rem 0;
+}
+
+.empty-state-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    color: var(--text-primary);
+    margin-bottom: 0.35rem;
+}
+
+.empty-state-desc {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+    margin-bottom: 1rem;
+}

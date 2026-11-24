@@ -1,0 +1,41 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+ENV/
+
+# Local environment variables and credentials
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+.streamlit/credentials.toml
+
+# Local/business datasets
+data/*.xlsx
+data/*.xls
+data/*.csv
+
+# Test, type-checking, and lint caches
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.bak
+
+# Editor and operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+Desktop.ini

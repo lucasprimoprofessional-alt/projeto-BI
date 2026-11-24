@@ -1,0 +1,103 @@
+{
+  "versao": "1.0",
+  "descricao": "Tabela paramétrica de referência de custos de peças, mão de obra, serviços e aquisição de novos ativos para o projeto BI Energisa Paraíba",
+  "moeda": "BRL",
+  "regras_de_custo": {
+    "Celular": {
+      "tela": { "peca": 280.00, "mao_de_obra": 120.00, "total": 400.00, "termos": ["tela", "display", "trinca", "quebra de imagem"] },
+      "bateria": { "peca": 115.00, "mao_de_obra": 65.00, "total": 180.00, "termos": ["bateria", "baixa autonomia", "descarrega rapidamente", "não mantém carga"] },
+      "conector": { "peca": 75.00, "mao_de_obra": 65.00, "total": 140.00, "termos": ["carregamento", "conector", "mau contato"] },
+      "camera": { "peca": 135.00, "mao_de_obra": 70.00, "total": 205.00, "termos": ["câmera", "camera", "foco"] },
+      "audio": { "peca": 65.00, "mao_de_obra": 55.00, "total": 120.00, "termos": ["alto-falante", "auricular", "áudio", "som"] },
+      "botoes": { "peca": 55.00, "mao_de_obra": 55.00, "total": 110.00, "termos": ["botão", "power", "volume"] },
+      "placa_nao_liga": { "peca": 180.00, "mao_de_obra": 120.00, "total": 300.00, "termos": ["não liga", "nao liga", "quebrado ou não liga"] },
+      "conectividade": { "peca": 80.00, "mao_de_obra": 70.00, "total": 150.00, "termos": ["conectividade", "sem sinal", "rede"] },
+      "servico_software": { "peca": 0.00, "mao_de_obra": 90.00, "total": 90.00, "termos": ["lentidão", "travamento", "aplicativo operacional", "erro em aplicativo", "reinicialização inesperada"] }
+    },
+    "Tablet": {
+      "tela": { "peca": 390.00, "mao_de_obra": 150.00, "total": 540.00, "termos": ["tela", "display", "toque", "sem resposta"] },
+      "bateria": { "peca": 190.00, "mao_de_obra": 85.00, "total": 275.00, "termos": ["bateria", "baixa autonomia", "descarrega"] },
+      "conector": { "peca": 95.00, "mao_de_obra": 75.00, "total": 170.00, "termos": ["carregamento", "conector"] },
+      "audio": { "peca": 85.00, "mao_de_obra": 65.00, "total": 150.00, "termos": ["alto-falante", "áudio"] },
+      "camera": { "peca": 120.00, "mao_de_obra": 70.00, "total": 190.00, "termos": ["câmera", "camera"] },
+      "placa_nao_liga": { "peca": 220.00, "mao_de_obra": 130.00, "total": 350.00, "termos": ["não liga", "nao liga"] },
+      "servico_software": { "peca": 0.00, "mao_de_obra": 110.00, "total": 110.00, "termos": ["lentidão", "travamento", "aplicativo"] }
+    },
+    "Notebook": {
+      "bateria": { "peca": 320.00, "mao_de_obra": 90.00, "total": 410.00, "termos": ["bateria", "degradada", "autonomia"] },
+      "teclado": { "peca": 210.00, "mao_de_obra": 110.00, "total": 320.00, "termos": ["teclado", "teclas"] },
+      "ssd_armazenamento": { "peca": 260.00, "mao_de_obra": 100.00, "total": 360.00, "termos": ["armazenamento", "disco", "ssd"] },
+      "memoria": { "peca": 150.00, "mao_de_obra": 55.00, "total": 205.00, "termos": ["memória", "ram"] },
+      "cooler_superaquecimento": { "peca": 145.00, "mao_de_obra": 120.00, "total": 265.00, "termos": ["cooler", "superaquecimento", "ventoinha", "refrigeração"] },
+      "tela": { "peca": 480.00, "mao_de_obra": 150.00, "total": 630.00, "termos": ["tela", "lcd"] },
+      "carregador_fonte": { "peca": 160.00, "mao_de_obra": 35.00, "total": 195.00, "termos": ["carregador", "fonte", "não carrega"] },
+      "placa_nao_liga": { "peca": 350.00, "mao_de_obra": 180.00, "total": 530.00, "termos": ["não liga", "nao liga"] },
+      "servico_software": { "peca": 0.00, "mao_de_obra": 120.00, "total": 120.00, "termos": ["lentidão", "travamento", "inicialização", "sistema"] }
+    },
+    "Impressora": {
+      "kit_tracao_rolete": { "peca": 95.00, "mao_de_obra": 110.00, "total": 205.00, "termos": ["rolete", "alimentação de papel", "atolamento", "tracionador"] },
+      "unidade_fusora": { "peca": 420.00, "mao_de_obra": 180.00, "total": 600.00, "termos": ["fusor", "fusora", "fixação"] },
+      "cilindro_drum": { "peca": 210.00, "mao_de_obra": 90.00, "total": 300.00, "termos": ["cilindro", "drum", "manchas"] },
+      "cabecote_impressao": { "peca": 380.00, "mao_de_obra": 160.00, "total": 540.00, "termos": ["falha de impressão", "cabeçote", "jato"] },
+      "fonte_nao_liga": { "peca": 230.00, "mao_de_obra": 130.00, "total": 360.00, "termos": ["não liga", "nao liga", "fonte"] },
+      "placa_rede_comunicacao": { "peca": 390.00, "mao_de_obra": 180.00, "total": 570.00, "termos": ["rede", "bluetooth", "comunicação"] },
+      "servico_manutencao_preventiva": { "peca": 0.00, "mao_de_obra": 130.00, "total": 130.00, "termos": ["limpeza", "preventiva", "ajuste"] }
+    }
+  },
+  "servicos_tecnicos_gerais": {
+    "diagnostico_tecnico": 45.00,
+    "configuracao_reinstalacao_sistema": 110.00,
+    "atualizacao_sistema_drivers": 55.00,
+    "limpeza_interna_notebook": 100.00,
+    "manutencao_preventiva_impressora": 130.00,
+    "configuracao_impressora_rede": 85.00,
+    "recuperacao_configuracao_software": 90.00,
+    "backup_migracao_dados": 120.00,
+    "reparo_placa_avaliacao": 180.00
+  },
+  "precos_aquisicao_novo": {
+    "Celular": {
+      "Samsung Galaxy A02s": 750.00,
+      "Samsung Galaxy A03 Core": 680.00,
+      "Samsung Galaxy A14": 890.00,
+      "Samsung Galaxy A15": 990.00,
+      "Samsung Galaxy A54": 1650.00,
+      "Motorola Moto E7": 720.00,
+      "Motorola Moto G8 Play": 780.00,
+      "Motorola Moto G54": 1150.00,
+      "Motorola Moto G84": 1390.00,
+      "Xiaomi Redmi 13C": 880.00,
+      "Xiaomi Redmi Note 12": 1190.00,
+      "padrao": 950.00
+    },
+    "Tablet": {
+      "Samsung Galaxy Tab A7 Lite": 920.00,
+      "Samsung Galaxy Tab A8": 1290.00,
+      "Samsung Galaxy Tab A9": 1390.00,
+      "Lenovo Tab M10 HD": 1080.00,
+      "padrao": 1150.00
+    },
+    "Notebook": {
+      "Dell Latitude 3420": 3800.00,
+      "Dell Latitude 5440": 4850.00,
+      "Dell Latitude 5490": 4200.00,
+      "HP ProBook 440 G8": 4400.00,
+      "Lenovo V14 G3": 3350.00,
+      "Lenovo ThinkPad E14": 4650.00,
+      "padrao": 4200.00
+    },
+    "Impressora": {
+      "Epson EcoTank L3250": 1190.00,
+      "Brother HL-L2370DW": 1450.00,
+      "Brother DCP-L2540DW": 2150.00,
+      "HP LaserJet Pro M404dn": 2350.00,
+      "HP LaserJet Pro M428fdw": 3150.00,
+      "padrao": 2000.00
+    }
+  },
+  "criterios_substituicao": {
+    "limite_custo_acumulado_pct": 0.50,
+    "reincidencia_minima_chamados": 3,
+    "considerar_obsolescencia": true
+  }
+}
